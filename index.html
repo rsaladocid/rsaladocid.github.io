@@ -15,7 +15,7 @@
             padding: 1%;
         }
 
-        .name {
+        .highlight {
             color: #f2f4fc;
         }
 
@@ -29,6 +29,8 @@
 
         header {
             font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
         }
 
         section {
@@ -43,6 +45,16 @@
         }
 
         @media (max-width : 980px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #subtitle {
+                font-size: 1.2rem;
+                margin-top: 1.5rem;
+            }
+
             section {
                 flex-direction: column;
                 padding-top: 7rem;
@@ -61,7 +73,8 @@
 </head>
 <body>
     <header>
-        <a><span class="name">ruben</span><span>salado</span></a>
+        <a id="title"><span class="highlight">ruben</span><span>salado</span></a>
+        <a id="subtitle"><span>pragmatic</span><span class="highlight">software</span><span>engineer</span></a>
     </header>
     <section>
         <div>
