@@ -71,9 +71,11 @@
         }
         .card:hover h2 {
             opacity: 1;
+            visibility: visible;
         }
-        .card:hover .fa {
+        .card:hover a {
             opacity: 1;
+            visibility: visible;
         }
         h2 {
             color: #eee;
@@ -84,11 +86,13 @@
             animation-name: opacityOff;
             animation-duration: 2s;
         }
-        .card .fa {
-            transition: opacity 1s;
+        .card a {
+            transition: opacity 1s, visibility 1s;
             animation-name: opacityOff;
             animation-duration: 2s;
             opacity: 0;
+            visibility: hidden;
+            pointer-events: visiblePainted;
         }
         .icons {
             position: absolute;
@@ -118,9 +122,11 @@
         @keyframes opacityOff {
             from {
                 opacity: 1;
+                visibility: visible;
             }
             to {
                 opacity: 0;
+                visibility: hidden;
             }
         }
 
@@ -162,11 +168,11 @@
             <div class="border">
                 <h2>Rubén Salado</h2>
                 <div class="icons">
-                    <a href="https://www.linkedin.com/in/rubensalado" target="_blank"><i class="fa fa-brands fa-linkedin" aria-hidden="true" title="About me"></i></a>
-                    <a href="https://medium.com/@rubensalado" target="_blank"><i class="fa fa-brands fa-medium" aria-hidden="true" title="My posts"></i></a>
-                    <a href="https://github.com/rsaladocid" target="_blank"><i class="fa fa-brands fa-github" aria-hidden="true" title="My code"></i></a>
-                    <a href="https://twitter.com/rsaladocid" target="_blank"><i class="fa fa-brands fa-twitter" aria-hidden="true" title="Follow me"></i></a>
-                    <a href="mailto:hello@rubensalado.com"><i class="fa fa-solid fa-envelope" aria-hidden="true" title="Contact me"></i></a>
+                    <a href="https://www.linkedin.com/in/rubensalado" target="_blank"><i class="fa-brands fa-linkedin" aria-hidden="true" title="About me"></i></a>
+                    <a href="https://medium.com/@rubensalado" target="_blank"><i class="fa-brands fa-medium" aria-hidden="true" title="My posts"></i></a>
+                    <a href="https://github.com/rsaladocid" target="_blank"><i class="fa-brands fa-github" aria-hidden="true" title="My code"></i></a>
+                    <a href="https://twitter.com/rsaladocid" target="_blank"><i class="fa-brands fa-twitter" aria-hidden="true" title="Follow me"></i></a>
+                    <a href="mailto:hello@rubensalado.com"><i class="fa-solid fa-envelope" aria-hidden="true" title="Contact me"></i></a>
                 </div>
             </div>
         </div>
