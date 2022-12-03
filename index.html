@@ -1,130 +1,177 @@
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
-    <title>rubensalado.com | I'm Rubén Salado, a pragmatic software engineer who is always learning</title>
-    <meta name="description" content="I'm Rubén Salado, a pragmatic software engineer who is always learning">
+    <title>rubensalado | Rubén Salado - Pragmatic Software Engineer</title>
+    <meta name="description" content="I'm Rubén Salado, a pragmatic software engineer.">
     <meta name="keywords" content="Software, Development, Engineering, Architecture, Craftmanship, Code">
     <meta name="author" content="Rubén Salado">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
-            background-color: #0c0c12;
-            background: linear-gradient(90deg, rgba(12,12,18,1) 10%, rgba(20,20,31,1) 50%);
-            color: #bcd6e9;
-            font: 14px/22px sans-serif;
-            padding: 1%;
+            background-color: #ebebeb;
+            color: #444;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
-
-        .highlight {
-            color: #f2f4fc;
+        header{
+            margin-top: -20px
         }
-
-        ul {
-            padding-inline-start: 0;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        header {
-            font-size: 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 5%;
-        }
-
         section {
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            width: 80%;
-            margin-left: 10%;
+            text-align: center;
+            margin-left: 37%;
+            width: 26%;
+            line-height: 150%;
         }
-
-        @media (max-width : 980px) {
-            header {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            #subtitle {
-                font-size: 1.2rem;
-                margin-top: 1.5rem;
-            }
-
-            section {
-                flex-direction: column;
-                margin-top: 15%;
-            }
+        svg {
+            cursor: default;
         }
-
-        nav {
-            font-size: 2.5rem;
-            line-height: 4.5rem;
-        }
-
-        nav a {
+        a {
             color: inherit;
             text-decoration: none;
         }
-
-        nav a:hover {
-            color: #f2f4fc;
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 2%;
+        }
+        .border {
+            height: 335px;
+            width: 290px;
+            background: transparent;
+            border-radius: 10px;
+            transition: border 1s;
+            position: relative;
+            border: 1px solid transparent;
+            animation-name: borderOff;
+            animation-duration: 2s;
+        }
+        .border:hover {
+            border: 1px solid #ededed;
+        }
+        .card {
+            height: 345px;
+            width: 300px;
+            border-radius: 10px;
+            transition: background 0.8s;
+            overflow: hidden;
+            box-shadow: 6px 8px 15px 3px #adadad;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: url("photo2.jpg") center center no-repeat;
+            background-size: 300px;
+            animation-name: zoomOut;
+            animation-duration: 2s;
+        }
+        .card:hover {
+            background: url("photo2.jpg") left center no-repeat;
+            background-size: 600px;
+        }
+        .card:hover h2 {
+            opacity: 1;
+        }
+        .card:hover .fa {
+            opacity: 1;
+        }
+        h2 {
+            color: #eee;
+            margin: 20px;
+            opacity: 0;
+            transition: opacity 1s;
+            text-shadow: 2px 2px 6px black;
+            animation-name: opacityOff;
+            animation-duration: 2s;
+        }
+        .card .fa {
+            transition: opacity 1s;
+            animation-name: opacityOff;
+            animation-duration: 2s;
+            opacity: 0;
+        }
+        .icons {
+            position: absolute;
+            fill: #adadad;
+            color: #adadad;
+            height: 130px;
+            top: 190px;
+            width: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .icons i:hover{
+            fill: #fff;
+            color: #fff;
         }
 
-        p {
-            text-align: center;
-            line-height: 2.5rem;
-            margin: 1%;
+        @media (max-width : 980px) {
+            section {
+                margin-top: 5%;
+                margin-left: 10%;
+                width: 80%;
+            }
         }
 
-        #intro {
-            border-top: 1px solid #28283e;
-            border-bottom: 1px solid #28283e;
+        @keyframes opacityOff {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes borderOff {
+            from {
+                border: 1px solid #ededed;
+            }
+            to {
+                border: 1px solid transparent;
+            }
+        }
+
+        @keyframes zoomOut {
+            from {
+                background: url("photo2.jpg") left center no-repeat;
+                background-size: 600px;
+            }
+            to {
+                background: url("photo2.jpg") center center no-repeat;
+                background-size: 300px;
+            }
         }
     </style>
 </head>
+
 <body>
     <header>
-        <a id="title"><span class="highlight">ruben</span><span>salado</span></a>
-        <a id="subtitle"><span>pragmatic</span><span class="highlight">software</span><span>engineer</span></a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="170" height="170" transform="scale(0.3)">
+            <title>rubensalado</title>
+            <g>
+                <path transform="rotate(45 84.551 84.551)" stroke-width="5" d="m25.05104,30.05101c0,-2.71689 2.28311,-5 5,-5l109,0c2.71689,0 5,2.28311 5,5l0,109c0,2.71689 -2.28311,5 -5,5l-109,0c-2.71689,0 -5,-2.28311 -5,-5l0,-109z" stroke="none" fill="none"/>
+                <text fill="#444" stroke="#444" stroke-width="0" x="2.55102" y="105.55102" font-size="63" text-anchor="start" xml:space="preserve" font-weight="bold">⊸₨</text>
+                <path transform="rotate(45 84.551 84.551)" stroke-width="5" d="m25.05104,30.05101c0,-2.71689 2.28311,-5 5,-5l109,0c2.71689,0 5,2.28311 5,5l0,109c0,2.71689 -2.28311,5 -5,5l-109,0c-2.71689,0 -5,-2.28311 -5,-5l0,-109z" stroke="#444" fill="none"/>
+            </g>
+        </svg>
     </header>
+    <div class="container">
+        <div class="card">
+            <div class="border">
+                <h2>Rubén Salado</h2>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/rubensalado" target="_blank"><i class="fa fa-brands fa-linkedin" aria-hidden="true" title="About me"></i></a>
+                    <a href="https://medium.com/@rubensalado" target="_blank"><i class="fa fa-brands fa-medium" aria-hidden="true" title="My posts"></i></a>
+                    <a href="https://github.com/rsaladocid" target="_blank"><i class="fa fa-brands fa-github" aria-hidden="true" title="My code"></i></a>
+                    <a href="https://twitter.com/rsaladocid" target="_blank"><i class="fa fa-brands fa-twitter" aria-hidden="true" title="Follow me"></i></a>
+                    <a href="mailto:hello@rubensalado.com"><i class="fa fa-solid fa-envelope" aria-hidden="true" title="Contact me"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
     <section id="intro">
-        <p class="highlight">Hi, I'm Rubén Salado</p>
-        <p>I understand the technology as a tool for innovation and business opportunities</p>
-    </section>
-    <section>
-        <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="170" height="170" transform="scale(1.5)">
-                <g>
-                    <path transform="rotate(45 84.551 84.551)" stroke-width="5" d="m25.05104,30.05101c0,-2.71689 2.28311,-5 5,-5l109,0c2.71689,0 5,2.28311 5,5l0,109c0,2.71689 -2.28311,5 -5,5l-109,0c-2.71689,0 -5,-2.28311 -5,-5l0,-109z" stroke="none" fill="#0c0c12"/>
-                    <text fill="#f2f4fc" stroke="#000" stroke-width="0" x="2.55102" y="105.55102" font-size="63" font-family="sans-serif" text-anchor="start" xml:space="preserve" font-weight="bold">⊸₨</text>
-                    <path transform="rotate(45 84.551 84.551)" stroke-width="5" d="m25.05104,30.05101c0,-2.71689 2.28311,-5 5,-5l109,0c2.71689,0 5,2.28311 5,5l0,109c0,2.71689 -2.28311,5 -5,5l-109,0c-2.71689,0 -5,-2.28311 -5,-5l0,-109z" stroke="#525fff" fill="none"/>
-                </g>
-           </svg>
-        </div>
-        <div>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="https://www.linkedin.com/in/rubensalado/" target="_blank">#aboutme</a>
-                    </li>
-                    <li>
-                        <a href="https://medium.com/@rubensalado" target="_blank">#myposts</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/rsaladocid" target="_blank">#mycode</a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/rsaladocid" target="_blank">#followme</a>
-                    </li>
-                    <li>
-                        <a href="mailto:hello@rubensalado.com">#contactme</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <p><b>Hi, I'm Rubén Salado, a pragmatic software engineer.</b><br />I understand the technology as a tool for innovation and business opportunities. My motto is: "Always be learning".</p>
     </section>
 </body>
